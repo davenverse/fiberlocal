@@ -19,4 +19,10 @@ object GenFiberLocal {
       FiberLocal.fromIOLocal(local)
     )
   }
+
+  def mapK[F[_]: Functor, G[_]](base: GenFiberLocal[F], fk: F ~> G): GenFiberLocal[G] =
+    new GenFiberLocal[G] {
+      def local[A](default: A): G[FiberLocal[G,A]] = 
+        fk(base.local(default).map(_.mapK(fk)))
+    }
 }
