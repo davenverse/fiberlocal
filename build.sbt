@@ -8,7 +8,7 @@ ThisBuild / testFrameworks += new TestFramework("munit.Framework")
 
 val catsV = "2.7.0"
 val catsEffectV = "3.3.11"
-val munitCatsEffectV = "1.0.5"
+val munitCatsEffectV = "1.0.7"
 
 
 // Projects
