@@ -1,6 +1,6 @@
-# fiberlocal - FiberLocal Abstractions [![Build Status](https://travis-ci.com/ChristopherDavenport/fiberlocal.svg?branch=master)](https://travis-ci.com/ChristopherDavenport/fiberlocal) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.chrisdavenport/fiberlocal_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.chrisdavenport/fiberlocal_2.12) ![Code of Consuct](https://img.shields.io/badge/Code%20of%20Conduct-Scala-blue.svg)
+# fiberlocal - FiberLocal Abstractions [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.chrisdavenport/fiberlocal_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.chrisdavenport/fiberlocal_2.12) ![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Scala-blue.svg)
 
-## [Head on over to the microsite](https://ChristopherDavenport.github.io/fiberlocal)
+## [Head on over to the microsite](https://davenverse.github.io/fiberlocal)
 
 ## Quick Start
 
