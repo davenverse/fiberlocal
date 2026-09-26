@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04]
-        scala: [2.12, 2.13, 3]
+        scala: [2.13, 3]
         java: [temurin@8]
         project: [fiberlocalJVM, fiberlocalNative, fiberlocalJS]
     runs-on: ${{ matrix.os }}
@@ -122,36 +122,6 @@ jobs:
       - name: sbt update
         if: matrix.java == 'temurin@8' && steps.setup-java-temurin-8.outputs.cache-hit == 'false'
         run: sbt +update
-
-      - name: Download target directories (2.12, fiberlocalJVM)
-        uses: actions/download-artifact@v6
-        with:
-          name: target-${{ matrix.os }}-${{ matrix.java }}-2.12-fiberlocalJVM
-
-      - name: Inflate target directories (2.12, fiberlocalJVM)
-        run: |
-          tar xf targets.tar
-          rm targets.tar
-
-      - name: Download target directories (2.12, fiberlocalNative)
-        uses: actions/download-artifact@v6
-        with:
-          name: target-${{ matrix.os }}-${{ matrix.java }}-2.12-fiberlocalNative
-
-      - name: Inflate target directories (2.12, fiberlocalNative)
-        run: |
-          tar xf targets.tar
-          rm targets.tar
-
-      - name: Download target directories (2.12, fiberlocalJS)
-        uses: actions/download-artifact@v6
-        with:
-          name: target-${{ matrix.os }}-${{ matrix.java }}-2.12-fiberlocalJS
-
-      - name: Inflate target directories (2.12, fiberlocalJS)
-        run: |
-          tar xf targets.tar
-          rm targets.tar
 
       - name: Download target directories (2.13, fiberlocalJVM)
         uses: actions/download-artifact@v6
@@ -270,7 +240,7 @@ jobs:
       - name: Submit Dependencies
         uses: scalacenter/sbt-dependency-submission@v2
         with:
-          modules-ignore: fiberlocaljvm_2.12 fiberlocaljvm_2.13 fiberlocaljvm_3 fiberlocalnative_2.12 fiberlocalnative_2.13 fiberlocalnative_3 site_2.12 site_2.13 site_3 fiberlocaljs_2.12 fiberlocaljs_2.13 fiberlocaljs_3
+          modules-ignore: fiberlocaljvm_2.13 fiberlocaljvm_3 fiberlocalnative_2.13 fiberlocalnative_3 site_2.13 site_3 fiberlocaljs_2.13 fiberlocaljs_3
           configs-ignore: test scala-tool scala-doc-tool test-internal
 
   site:
