@@ -1,4 +1,4 @@
-ThisBuild / tlBaseVersion := "0.2" // your current series x.y
+ThisBuild / tlBaseVersion := "0.3" // your current series x.y
 
 ThisBuild / organization := "io.chrisdavenport"
 ThisBuild / organizationName := "Christopher Davenport"
@@ -10,12 +10,12 @@ ThisBuild / developers := List(
 
 ThisBuild / tlCiReleaseBranches := Seq()
 
-val catsV = "2.9.0"
-val catsEffectV = "3.4.9"
+val catsV = "2.13.0"
+val catsEffectV = "3.7.1"
 
-val munitCatsEffectV = "2.0.0-M3"
+val munitCatsEffectV = "2.2.1"
 
-ThisBuild / crossScalaVersions := Seq("2.12.15","2.13.18", "3.3.8")
+ThisBuild / crossScalaVersions := Seq("2.13.18", "3.3.8")
 ThisBuild / scalaVersion := "3.3.8"
 ThisBuild / versionScheme := Some("early-semver")
 
